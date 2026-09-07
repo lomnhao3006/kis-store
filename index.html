@@ -103,7 +103,7 @@
 </head>
 <body class="flex flex-col items-center py-6 px-4 text-brown-600 relative overflow-x-hidden">
 
-    <!-- Background Decorative SVGs (เปลี่ยนเป็นโทนส้ม/ครีม) -->
+    <!-- Background Decorative SVGs -->
     <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
         <svg class="absolute top-[5%] left-[10%] w-8 h-8 text-orange-300 anim-float-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
         <svg class="absolute top-[15%] left-[2%] w-6 h-6 text-orange-200/80 anim-pulse" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
@@ -150,17 +150,13 @@
             <svg class="absolute top-[25%] -right-3 w-7 h-7 text-orange-200 anim-float-2 z-20 drop-shadow-sm" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
             <svg class="absolute bottom-[40%] -left-3 w-5 h-5 text-orange-400 anim-spin z-20 drop-shadow-sm" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
 
-            <!-- รูปภาพ QR Code / Banner (เปลี่ยนลิงก์รูปภาพใหม่ตรงนี้) -->
+            <!-- รูปภาพ QR Code / Banner (อัปเดตลิงก์ Google Drive เป็นรูปแบบ Direct Image Link) -->
             <div class="relative p-2 rounded-[36px] z-10">
                 <svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
                     <rect x="2" y="2" width="calc(100% - 4px)" height="calc(100% - 4px)" rx="34" fill="none" stroke="#fb923c" stroke-width="2.5" stroke-dasharray="12 12" stroke-linecap="round" class="animate-dash" />
                 </svg>
                 <div class="rounded-[28px] overflow-hidden relative shadow-sm border-[4px] border-white">
-                    <!-- ใส่ URL รูปภาพใหม่จาก Google Drive หรือลิงก์รูปของคุณแทนที่ด้านล่างนี้ -->
-                    <script type="text/javascript">
-                        // หากต้องการใช้ลิงก์จาก Google Drive แนะนำให้แปลงเป็น Direct Link หรือใช้ Hosting ฝากรูปภาพ
-                    </script>
-                    <img src="https://i.postimg.cc/yYXXLQnm/att-YZKp-Oou02U1m01U9E7IVQ5yixn-Mty-Ak-Ll-S0rpd-OVE00.jpg" alt="ช่องทางชำระเงิน" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/600x600/fef3ed/ea580c?text=Kiss+Payment'">
+                    <img src="https://lh3.googleusercontent.com/d/1omiM3u4rq3SjGPydAyEWiMqss9X3l977" alt="ช่องทางชำระเงิน" class="w-full h-auto object-cover" onerror="this.src='https://placehold.co/600x600/fef3ed/ea580c?text=Kiss+Payment'">
                 </div>
             </div>
 
@@ -193,7 +189,7 @@
                     <div class="h-px bg-orange-200 flex-1"></div>
                 </div>
 
-                <!-- โซนบัญชีธนาคาร & วอเลท (Virtual Cards โทนส้ม/ครีม/น้ำตาล) -->
+                <!-- โซนบัญชีธนาคาร & วอเลท -->
                 <div class="space-y-4">
                     
                     <!-- 1. MAKE by KBank -->
@@ -385,7 +381,7 @@
                     else if(type === 'note') buttonElement.classList.add('text-yellow-700');
                 }, 2000);
 
-            } (err) {
+            } catch (err) {
                 console.error('ไม่สามารถคัดลอกได้:', err);
             }
 
